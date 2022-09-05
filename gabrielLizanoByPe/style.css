@@ -1,0 +1,30 @@
+body {background-color: rgb(55, 55, 125);}
+
+a:link {
+    color: red;
+  }
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+
+  /* Class */
+.menu {display: flex;
+    border: 2px solid;}
+    .item {
+    float: right;
+    padding: 2px;
+    margin: 2px;
+}
+.logo{width: 25%;}
+.links{width: 75%;}
+
+.col-2{min-height: 300px; background-color: blanchedalmond; vertical-align: middle;}
