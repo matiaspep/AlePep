@@ -9,7 +9,10 @@
 }
 .basic header {
     grid-area: header;
+    background-color: lightblue;
+    text-align: center;
 }
+
 .basic nav {
     grid-area: nav;
 }
@@ -18,4 +21,5 @@
 }
 .basic footer {
     grid-area: footer;
+    background-color: lightblue;
 }
