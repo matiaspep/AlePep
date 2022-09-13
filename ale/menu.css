@@ -1,82 +1,50 @@
+/* Basic styling */
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-    background-color: rgb(104, 78, 255);
-    color: white;
     font-family: sans-serif;
 }
 
 nav {
+    background: #222;
     padding: 5px 20px;
-    border: 1px solid white;
-    margin: 20px 40px;
 }
 
 ul {
-    list-style: none;
+    list-style-type: none;
 }
 
-p {
-    font-size: 32px;
-    margin: 1px;
+a {
+    color: white;
+    text-decoration: none;
 }
 
-footer {
-    width: 100%;
-    border: 1px solid white;
-    padding: 15px 0;
-    text-align: center;
+a:hover {
+    text-decoration: underline;
 }
 
-.cssgrid {
-    display: grid;
-    grid-template-columns: auto;
-    border: 1px solid white;
-    margin: 20px 40px;
-    background-color: coral;
-    justify-content: center;
-    text-align: center;
-    grid-template-areas: 
-    'box1'
-    'box2';
+.logo a:hover {
+    text-decoration: none;
 }
 
-.box1 {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    padding: 10%;
+.menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
 }
 
-.box2 {
-    align-self: center;
+.logo a,
+.toggle a {
+    font-size: 20px;
 }
 
-.box3 {
-    border: 1px solid white;
-    margin: 20px 40px;
-    text-align: center;
-    align-items: flex-start;
-    padding: 10%;
-    background-color: blueviolet;
+.button.secondary {
+    border-bottom: 1px #444 solid;
 }
-
-.box1 h1 {
-    font-size: 72px;
-    margin: 1px;
-}
-
-.box2 img {
-    width: 500px;
-}
-
-
-a:link      {text-decoration: none;color: white;}
-a:visited   {color: white;}
-a:hover     {color: white;text-decoration: underline;}
-a:active    {color: lightskyblue;}
 
 /* Mobile menu */
 .menu {
@@ -187,16 +155,5 @@ a:active    {color: lightskyblue;}
 
     .menu li.button {
         padding-right: 0;
-    }
-}
-
-@media screen and (min-width: 900px) {
-    #cssgrid {
-    display: grid;
-    justify-content: space-evenly;
-    text-align: left;
-    grid-template-columns: auto auto;
-    grid-template-areas:
-    'box1 box2';
     }
 }
