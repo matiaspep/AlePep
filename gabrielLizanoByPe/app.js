@@ -3,7 +3,7 @@ const articulo1= document.getElementById('artUno');
 const articulo2 = document.getElementById('artDos');
 const articulo3 = document.getElementById('artTres');
 const articulo4 = document.getElementById('artCuatro')
-console.log(carrusel)
+
 
 carrusel.addEventListener('click',(Event) => {
     if(Event.target.classList.value !== '') {

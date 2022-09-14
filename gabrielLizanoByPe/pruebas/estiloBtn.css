@@ -1,0 +1,25 @@
+.botonera{
+    border: 1px solid green;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.botonera nav{
+    padding: 10px;
+}
+.botonera a{
+    text-decoration: none;
+    color: black;
+}
+
+.c1{
+    height: 90px;
+    width: 90px;
+    background-color: red;
+}
+c2{
+    visibility: hidden;
+    /* display: none;*/
+}
