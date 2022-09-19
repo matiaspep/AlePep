@@ -164,8 +164,7 @@ a {
     .submenu-active .submenu {
         display: block;
         position: absolute;
-        left: 0;
-        top: 68px;
+        margin-top: 10px;
         background: #111;
     }
 
