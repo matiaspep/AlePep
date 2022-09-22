@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: red;
+    color: white;
+    font-family: sans-serif;
+}
+
+nav {
+    margin: 20px 40px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-size: 32px;
+    margin: 1px;
+}
+
+article li {
+    font-size: 32px;
+}
+
+footer {
+    margin-top: 20px;
+    border: 1px solid white;
+    padding: 15px 15px;
+    text-align: center;
+}
+
+.cssgrid {
+    display: grid;
+    grid-template-columns: auto;
+    border: 1px solid white;
+    margin: 20px 40px;
+    padding: 50px 0px;
+    background-color: transparent;
+    justify-content: center;
+    text-align: center;
+    grid-template-areas:
+        'box2'
+        'box1';
+}
+
+.box1 {
+    align-self: center;
+}
+
+.box2 {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.box3 {
+    border: 1px solid white;
+    margin: 20px 40px;
+    text-align: center;
+    align-items: flex-start;
+    padding: 10%;
+    background-color: transparent;
+}
+
+.box1 img {
+    width: 300px;
+}
+
+.box2 h1 {
+    font-size: 72px;
+    margin: 1px;
+}
+
+.menu,
+.submenu {
+    list-style-type: none;
+}
+
+.logo {
+    font-size: 20px;
+    padding: 7.5px 10px 7.5px 0;
+}
+
+.item {
+    padding: 10px;
+}
+
+.item.buttom {
+    padding: 9px 5px;
+}
+
+.item:not(.buttom) a:hover,
+.item a:hover::after {
+    color: #ccc;
+}
+
+/* Mobile Menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu li a {
+    display: block;
+    padding: 5px 5px;
+}
+
+.menu li.subitem a {
+    padding: 10px;
+}
+
+.toggle {
+    order: 1;
+}
+
+.item.button {
+    order: 2;
+}
+
+.item {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.active .item {
+    display: block;
+}
+
+.button.secondary {
+    border-bottom: 1px #444 solid;
+}
+
+/* Submenus */
+.submenu {
+    display: none;
+}
+
+.submenu-active .submenu {
+    display: block;
+}
+
+.has-submenu>a::after {
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 900;
+    content: "\f078";
+    color: white;
+    padding-left: 5px;
+}
+
+.subitem a {
+    padding: 10px 15px;
+}
+
+.submenu-active {
+    background-color: transparent;
+    border-radius: 3px;
+}
+
+/* Contenido secundario */
+.contSecundario {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.contSecundario h1 {
+    font-size: 56px;
+    margin-bottom: 30px;
+}
+
+.contSecundario nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contSecundario article {
+    border: 1px solid white;
+    margin: 0px 40px;
+    text-align: center;
+    padding: 10%;
+    background-color: transparent;
+}
+
+.contSecundario button {
+    font-size: 16px;
+    color: white;
+    background: transparent;
+    padding: 10px 15px;
+    flex-grow: 1;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.invisible {
+    display: none;
+}
+
+/* Tablet menu */
+@media all and (min-width: 700px) {
+    .menu {
+        justify-content: center;
+    }
+
+    .logo {
+        flex: 1;
+    }
+
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+
+    .toggle {
+        flex: 1;
+        text-align: right;
+        order: 2;
+    }
+
+    .button.secondary a {
+        background: transparent;
+    }
+
+    .button.secondary {
+        border: 0;
+    }
+
+
+    .button a {
+        padding: 7.5px 15px;
+        background: teal;
+        border: 1px #006d6d solid;
+    }
+
+}
+
+/* Desktop menu */
+@media all and (min-width: 960px) {
+    .item {
+        order: 1;
+        width: auto;
+        display: block;
+    }
+
+    .button {
+        order: 2;
+    }
+
+    .submenu-active .submenu {
+        display: block;
+        position: absolute;
+        margin-top: 10px;
+        background: rgb(104, 78, 255);
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .submenu-active {
+        border-radius: 0;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #cssgrid {
+        display: grid;
+        padding: 200px 0px;
+        justify-content: space-evenly;
+        text-align: left;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+            'box1 box2';
+    }
+
+    .box1 img {
+        width: 700px;
+    }
+
+}
